@@ -1,0 +1,34 @@
+# 应用名称
+spring.application.name: blog
+# 应用服务 WEB 访问端口
+server.port: 8081
+# 数据库驱动：
+
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+# 数据源名称
+        name: defaultDataSource
+# 数据库连接地址
+        url: jdbc:mysql://localhost:3306/vueblog?serverTimezone=UTC
+# 数据库用户名&密码：
+        username: root
+        password: 123456
+#Mybatis Plus配置
+
+mybatis-plus:
+    mapper-locations: classpath*:/mapper/**Mapper.xml
+
+shiro-redis:
+    enabled: true
+    redis-manager:
+        host: 127.0.0.1:6379
+
+myproject:
+    jwt:
+# 加密秘钥
+        secret: f4e2e52034348f86b67cde581c0f9eb5
+# token有效时长，7天，单位秒
+        expire: 604800
+        header: token
+
